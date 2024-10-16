@@ -1,4 +1,4 @@
-# InfraGAN 
+# MIIGAN
 ![Alt text](fig/InfraGAN.png "Architecture")
 
 The code is based on the PyTorch [implementation](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) of the pix2pix, CycleGAN.

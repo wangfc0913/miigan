@@ -12,7 +12,7 @@ and also [ThermalGAN](https://github.com/vlkniaz/ThermalGAN)
 ### Installation
 - Clone this repo:
 ```bash
-git clone https://github.com/makifozkanoglu/InfraGAN
+git clone [https://github.com/wangfc0913/miigan.git]
 ```
 - Install dependencies by using the command below
 ```bash

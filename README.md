@@ -32,7 +32,7 @@ pip install dominate
 
 ### InfraGAN train/test on VEDAI dataset
 - Download a VEDAI dataset from:
-- Google Drive [googleDrive](https://drive.google.com/file/d/1FXhYbDdqrrHERm8a20drlR18Ylj8iRDY/view?usp=drive_link) and BaiDu Net[baiduNet](https://pan.baidu.com/s/1r3h8XDoVDMhiVHeobV7qpg?pwd=zge6)
+- Google Drive([googleDrive](https://drive.google.com/file/d/1FXhYbDdqrrHERm8a20drlR18Ylj8iRDY/view?usp=drive_link)) or BaiDu Netdisk([baiduNet](https://pan.baidu.com/s/1r3h8XDoVDMhiVHeobV7qpg?pwd=zge6))
 
 ```bash
 https://downloads.greyc.fr/vedai/

@@ -1,8 +1,7 @@
 # MIIGAN
-![Alt text](fig/InfraGAN.png "Architecture")
+![Alt text](fig/miigan.png "Architecture")
 
-The code is based on the PyTorch [implementation](https://github.com/junyanz/pytorch-CycleGAN-and-pix2pix) of the pix2pix, CycleGAN.
-and also [ThermalGAN](https://github.com/vlkniaz/ThermalGAN)
+The code is based on the PyTorch [implementation](https://github.com/makifozkanoglu/InfraGAN) of the InfraGAN.
 ## Prerequisites
 - Linux or macOS
 - Python 2 or 3
@@ -33,6 +32,7 @@ pip install dominate
 
 ### InfraGAN train/test on VEDAI dataset
 - Download a VEDAI dataset from:
+- Google Drive [googleDrive](https://drive.google.com/file/d/1FXhYbDdqrrHERm8a20drlR18Ylj8iRDY/view?usp=drive_link) and BaiDu Net[baiduNet](https://pan.baidu.com/s/1r3h8XDoVDMhiVHeobV7qpg?pwd=zge6)
 
 ```bash
 https://downloads.greyc.fr/vedai/

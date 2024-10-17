@@ -1,11 +1,12 @@
 # MIIGAN
 ![Alt text](fig/miigan.png "Architecture")
 
-The code is based on the PyTorch implementation of the InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN), and also VM-UNet [code](https://github.com/JCruan519/VM-UNet).
+The code is based on the PyTorch implementation of the InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN).
 ## Prerequisites
-- Linux or macOS
-- Python 2 or 3
-- CPU or NVIDIA GPU + CUDA CuDNN
+- Linux
+- Python 3
+- GPU
+- Mamba [reference](https://github.com/JCruan519/VM-UNet)
 
 ## Getting Started
 ### Installation

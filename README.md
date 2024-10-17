@@ -1,7 +1,7 @@
 # MIIGAN
 ![Alt text](fig/miigan.png "Architecture")
 
-The code is referenced from InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN).
+The code is referenced from InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN) and VM-UNet [code](https://github.com/JCruan519/VM-UNet).
 ## Prerequisites
 - Linux
 - Python 3

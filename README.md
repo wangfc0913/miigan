@@ -1,7 +1,7 @@
 # MIIGAN
 ![Alt text](fig/miigan.png "Architecture")
 
-The code is based on the PyTorch implementation of the InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN).
+The code is referenced from InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN).
 ## Prerequisites
 - Linux
 - Python 3
@@ -12,7 +12,7 @@ The code is based on the PyTorch implementation of the InfraGAN [code](https://g
 ### Installation
 - Clone this repo:
 ```bash
-git clone [https://github.com/wangfc0913/miigan.git]
+git clone https://github.com/wangfc0913/miigan.git
 ```
 - Install dependencies by using the command below
 ```bash

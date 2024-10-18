@@ -10,12 +10,12 @@
 
 <img src="figs/MIIGANOverview.PNG" alt="Alt text" title="Architecture" style="zoom: 80%;" />
 
-| <img src="figs/MIIGAN-Gen.PNG" alt="Alt text" title="Architecture" style="zoom: 80%;" /> | <img src="figs/MIIGAN-Disc.PNG" alt="Alt text" title="Architecture" style="zoom: 80%;" /> |
+| <img src="figs/MIIGAN-Gen.PNG" alt="Alt text" title="MIIGAN-Gen" style="zoom: 80%;" /> | <img src="figs/MIIGAN-Disc.PNG" alt="Alt text" title="MIIGAN-Disc" style="zoom: 80%;" /> |
 | ------------------------------------------------------------ | ------------------------------------------------------------ |
 
 <h2>Results</h2>
 
-<img src="figs/DifferentModelMetric.PNG" alt="Alt text" title="Architecture" style="zoom: 60%;" />
+<img src="figs/DifferentModelMetric.PNG" alt="Alt text" title="DifferentModelMetric" style="zoom: 60%;" />
 
 The code is referenced from InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN).
 

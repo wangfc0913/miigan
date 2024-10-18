@@ -15,7 +15,7 @@
 
 <h2>Results</h2>
 
-<img src="figs/DifferentModelMetric.PNG" alt="Alt text" title="Architecture" style="zoom: 80%;" />
+<img src="figs/DifferentModelMetric.PNG" alt="Alt text" title="Architecture" style="zoom: 60%;" />
 
 The code is referenced from InfraGAN [code](https://github.com/makifozkanoglu/InfraGAN).
 

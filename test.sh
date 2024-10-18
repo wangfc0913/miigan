@@ -1,13 +1,13 @@
 #!/bin/bash
 
 
-model="tmvmgan"
-name="imgan_KAIST"
-which_model_netG="TMVMGenerator"
-which_model_netD="TMVMDiscriminator"
+model="miigan"
+name="MIIGAN_VEDAI_512"
+which_model_netG="MIIGANGenerator"
+which_model_netD="MIIGANDiscriminator"
 which_epoch="best_196"
 dataset_mode="VEDAI"
-dataroot="./datasets/KAIST"
+dataroot="./datasets/VEDAI"
 
 which_direction="AtoB"
 input_nc=3

@@ -1,12 +1,24 @@
 #!/bin/bash
 
 
-model="tmvmgan"
-name="imgan_vedai"
-which_model_netG="TMVMGenerator"
-which_model_netD="TMVMDiscriminator"
-dataset_mode="VEDAI"
-dataroot="./datasets/VEDAI_512"
+model="miigan"  # or infragan or pix2pix or thermal_gan or cycle_gan
+name="MIIGAN_VEDAI_512"  # Custom checkpoint file directory
+which_model_netG="MIIGANGenerator"
+# - Generator
+#    -- infragan  ->  unet_512
+#    -- pix2pix   ->  unet_256
+#    -- thermal_gan  ->  unet_512
+#    -- cycle_gan  ->  unet_512
+
+which_model_netD="MIIGANDiscriminator"
+# - Discriminator
+#    -- infragan  ->  unetdiscriminator
+#    -- pix2pix   ->  basic
+#    -- thermal_gan  ->  basic
+#    -- cycle_gan  ->  basic
+
+dataset_mode="VEDAI"  # The code has been modified, and all datasets now default to using VEDAI.
+dataroot="./datasets/VEDAI_512"   #  Dataset path
 
 which_direction="AtoB"
 input_nc=3

@@ -17,10 +17,10 @@ def create_model(opt):
         # assert(opt.dataset_mode == 'thermal')
         from .infragan import InfraGAN
         model = InfraGAN()
-    elif opt.model == 'tmvmgan':
+    elif opt.model == 'miigan':
         # assert(opt.dataset_mode == 'thermal')
-        from .tmvmgan import TMVMGAN
-        model = TMVMGAN()
+        from .miigan_model import MIIGAN
+        model = MIIGAN()
     elif opt.model == 'thermal_gan_rel':
         assert(opt.dataset_mode == 'thermal_rel')
         from .thermal_gan_rel_model import ThermalGANRelModel

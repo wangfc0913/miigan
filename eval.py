@@ -9,10 +9,10 @@ from collections import OrderedDict
 
 class Evalulate:
     def __init__(self, opt):
-        mode = "test"
+        mode = "test"  # or val
         if opt.dataset_mode == 'VEDAI':
             dataset = ThermalDataset()
-            dataset.initialize(opt, mode="test")
+            dataset.initialize(opt, mode="test")  # or mode="val"
         elif opt.dataset_mode == 'KAIST':
             dataset = ThermalDataset()
             # mode = '/cta/users/mehmet/rgbt-ped-detection/data/scripts/imageSets/test-all-20.txt'

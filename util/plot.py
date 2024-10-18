@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from PIL import Image
 from models.networks import TextureDetector
 
-file_path = "../checkpoints/imgan_vedai/"
+file_path = "../checkpoints/MIIGAN_VEDAI_512/"   # path
 
 
 def process_loss_log():
@@ -151,26 +151,6 @@ def plot_metrix():
 
     # 显示图形
     plt.savefig(file_path + "matrix.png")
-    plt.show()
-
-
-def test_texture():
-    # 加载图像
-    image = Image.open("./data/0001_rgb.tiff")  # 替换为您自己的图像路径
-    # 图像预处理
-    preprocess = transforms.Compose([
-        transforms.ToTensor()
-    ])
-    image = preprocess(image).unsqueeze(0)  # 添加 batch 维度
-
-    # create model
-    model = TextureDetector()
-    output = model(image)
-
-    # 可视化结果
-    plt.imshow(output.squeeze(0).permute(1, 2, 0).detach().numpy(), cmap='gray')
-    plt.title('Texture Detected')
-    plt.axis('off')
     plt.show()
 
 

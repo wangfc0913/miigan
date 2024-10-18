@@ -47,9 +47,9 @@ def make_thermal_dataset_VEDAI(path):
     assert os.path.isdir(path), '%s is not a valid directory' % path
 
     for fname in sorted(os.listdir(path)):
-        if is_image_file(fname) and fname.endswith("co.png"):
+        if is_image_file(fname) and fname.endswith("co.jpg") or fname.endswith("co.png"):
             path_tv = os.path.join(path, fname)
-            path_ir = fname[:-6] + "ir.png"
+            path_ir = fname[:-6] + ("ir.png" if fname.endswith("co.png") else "ir.jpg")
             path_ir = os.path.join(path, path_ir)
             annotation_file = os.path.join(path, "..", "Annotations512", fname[:-7] + ".txt")
             images.append({'A': path_tv, 'B': path_ir, "annotation_file": annotation_file})

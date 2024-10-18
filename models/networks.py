@@ -7,7 +7,6 @@ from torch.optim import lr_scheduler
 import torch
 import torch.nn as nn
 
-from models.imgan.imgan import IMGAN
 from models.multiresunet import MultiResUnetGenerator
 from models.unetgan.unet_discriminator import Unet_DiscriminatorGenerator
 
@@ -134,8 +133,6 @@ def define_G(input_nc, output_nc, ngf, which_model_netG, norm='batch', use_dropo
                              gpu_ids=gpu_ids)
     elif which_model_netG == 'MultiResnet':
         netG = MultiResUnetGenerator(input_nc, output_nc, ngf=ngf // 2, use_dropout=use_dropout, gpu_ids=gpu_ids)
-    elif which_model_netG == 'imgan':
-        netG = IMGAN(input_nc, output_nc, depths=[2, 2, 2, 2], depths_decoder=[2, 2, 2, 1])
     else:
         raise NotImplementedError('Generator model name [%s] is not recognized' % which_model_netG)
     if len(gpu_ids) > 0:

@@ -1,8 +1,8 @@
 # <h1 align = "center">MIIGAN</h1>
 
-<center>Fuchao Wang</center>
+<p align = "center">Fuchao Wang</p>
 
-<center>Northeastern University, Shenyang, Liaoning, China</center>
+<p align = "center">Northeastern University, Shenyang, Liaoning, China</p>
 
 **Abstract** XXXXXXX
 

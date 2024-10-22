@@ -12,14 +12,11 @@ file_path = "../checkpoints/MIIGAN_VEDAI_512/"   # path
 
 def process_loss_log():
 
-    # 打开 loss_log.txt 文件
     with open(file_path + 'loss_log.txt', 'r') as file:
         lines = file.readlines()
 
-    # 匹配包含 "SSIM" 的行
     ssim_lines = [line for line in lines if "SSIM" in line]
 
-    # 从每一行中解析出 epoch、SSIM、MSSIM、PSNR、LPIPS 的值
     data = []
     for line in ssim_lines:
         match = re.search(
@@ -34,18 +31,15 @@ def process_loss_log():
             lpips = match.group(6)
             data.append((epoch, ssim, mssim, l1, psnr, lpips))
 
-    # 将数据写入 CSV 文件
     with open(file_path + 'output.csv', 'w', newline='') as csvfile:
         writer = csv.writer(csvfile)
-        writer.writerow(['epoch', 'SSIM', 'MSSIM', 'L1', 'PSNR', 'LPIPS'])  # 写入列名
-        writer.writerows(data)  # 写入数据
+        writer.writerow(['epoch', 'SSIM', 'MSSIM', 'L1', 'PSNR', 'LPIPS'])  
+        writer.writerows(data)  
 
 
 def plot_metrix():
-    # 从 CSV 文件读取数据
     df = pd.read_csv(file_path + 'output.csv')
 
-    # 提取数据
     epoch = df['epoch']
     ssim = df['SSIM']
     mssim = df['MSSIM']
@@ -53,7 +47,6 @@ def plot_metrix():
     psnr = df['PSNR']
     lpips = df['LPIPS']
 
-    # 使用Savitzky-Golay平滑滤波器对数据进行平滑处理
     window_size = 11
     order = 3
 
@@ -68,10 +61,8 @@ def plot_metrix():
     psnr_smooth = psnr
     lpips_smooth = lpips
 
-    # 创建新的图形并设置图形大小
     plt.figure(figsize=(10, 8))
 
-    # 绘制SSIM曲线图
     plt.subplot(3, 2, 1)
     plt.plot(epoch, ssim_smooth, label='SSIM', marker='o')
     plt.xlabel('Epoch')
@@ -80,13 +71,11 @@ def plot_metrix():
     plt.legend(loc='lower right')
     plt.grid(True)
 
-    # 找到SSIM曲线的最大值并标出
     max_ssim_index = np.argmax(ssim_smooth)
     max_ssim = ssim_smooth[max_ssim_index]
     plt.plot(epoch[max_ssim_index], max_ssim, 'o', color='orange')
     plt.text(epoch[max_ssim_index], max_ssim, f'Epoch: {max_ssim_index+1}, Max Value: {max_ssim:.3f}', ha='right')
 
-    # 绘制MSSIM曲线图
     plt.subplot(3, 2, 2)
     plt.plot(epoch, mssim_smooth, label='MSSIM', marker='o')
     plt.xlabel('Epoch')
@@ -95,13 +84,11 @@ def plot_metrix():
     plt.legend(loc='lower right')
     plt.grid(True)
 
-    # 找到MSSIM曲线的最大值并标出
     max_mssim_index = np.argmax(mssim_smooth)
     max_mssim = mssim_smooth[max_mssim_index]
     plt.plot(epoch[max_mssim_index], max_mssim, 'o', color='orange')
     plt.text(epoch[max_mssim_index], max_mssim, f'Epoch: {max_mssim_index+1}, Max Value: {max_mssim:.3f}', ha='right')
 
-    # 绘制L1曲线图
     plt.subplot(3, 2, 3)
     plt.plot(epoch, l1_smooth, label='L1', marker='o')
     plt.xlabel('Epoch')
@@ -110,13 +97,11 @@ def plot_metrix():
     plt.legend(loc='upper right')
     plt.grid(True)
 
-    # 找到L1曲线的最大值并标出
     min_l1_index = np.argmin(l1_smooth)
     min_l1 = l1_smooth[min_l1_index]
     plt.plot(epoch[min_l1_index], min_l1, 'o', color='orange')
     plt.text(epoch[min_l1_index], min_l1, f'Epoch: {min_l1_index+1}, Max Value: {min_l1:.3f}', ha='right')
 
-    # 绘制PSNR曲线图
     plt.subplot(3, 2, 4)
     plt.plot(epoch, psnr_smooth, label='PSNR', marker='o')
     plt.xlabel('Epoch')
@@ -125,13 +110,11 @@ def plot_metrix():
     plt.legend(loc='lower right')
     plt.grid(True)
 
-    # 找到PSNR曲线的最大值并标出
     max_psnr_index = np.argmax(psnr_smooth)
     max_psnr = psnr_smooth[max_psnr_index]
     plt.plot(epoch[max_psnr_index], max_psnr, 'o', color='orange')
     plt.text(epoch[max_psnr_index], max_psnr, f'Epoch: {max_psnr_index+1}, Max Value: {max_psnr:.3f}', ha='right')
 
-    # 绘制LPIPS曲线图
     plt.subplot(3, 2, 5)
     plt.plot(epoch, lpips_smooth, label='LPIPS', marker='o')
     plt.xlabel('Epoch')
@@ -140,16 +123,13 @@ def plot_metrix():
     plt.legend()
     plt.grid(True)
 
-    # 找到LPIPS曲线的最大值并标出
     min_lpips_index = np.argmin(lpips_smooth)
     min_lpips = lpips_smooth[min_lpips_index]
     plt.plot(epoch[min_lpips_index], min_lpips, 'o', color='orange')
     plt.text(epoch[min_lpips_index], min_lpips, f'Epoch: {min_lpips_index+1}, Min Value: {min_lpips:.3f}', ha='right')
 
-    # 调整布局
     plt.tight_layout()
 
-    # 显示图形
     plt.savefig(file_path + "matrix.png")
     plt.show()
 

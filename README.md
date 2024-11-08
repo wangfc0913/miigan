@@ -4,7 +4,7 @@
 
 <p align = "center">Northeastern University, Shenyang, Liaoning, China</p>
 
-**Abstract** XXXXXXX
+**Abstract** Collecting infrared images on-site is the most direct and realistic approach. However, it is costly, and due to varying environmental conditions, replicating the same conditions for comparative experiments is challenging. This presents significant obstacles for research in infrared technology. To target this issue, we propose MIIGAN, a Visible-to-Infrared Image Generation model that achieves SOTA performance. MIIGAN employs a GAN based on U-Net, with Mamba blocks serving as the core module to improve generation quality. Additionally, we develop a Spatial and Channel Attention Module (SCAM) and integrate it into the skip connections of U-Net to enhance feature extraction. We also design a Dual-encoder combining Transformer and Mamba to improve the discriminator’s performance. Furthermore, we introduce the Difference and Product learning Module (DPM) into the Dual-encoder to enhance differential and consistency feature extraction. Finally, we integrate multi-layer feature differential and consistency losses into the objective function of the discriminator, providing comprehensive pixel-level feedback across multiple scales. We conduct extensive comparative and ablation studies across four datasets and performed downstream object detection tasks on the generated infrared images to validate MIIGAN's performance.
 
 <h2>Architecture</h2>
 

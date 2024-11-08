@@ -1,6 +1,6 @@
 # <h1 align = "center">MIIGAN</h1>
 
-<p align = "center">Fuchao Wang^a, Huaici Zhao, Yuhuai Peng, Jian Fang, Ronghua Zhang</p>
+<p align = "center">Fuchao Wang<sup>a</sup>, Huaici Zhao, Yuhuai Peng, Jian Fang, Ronghua Zhang</p>
 
 <p align = "center">a.School of Computer Science and Engineering,  Northeastern University, Shenyang, Liaoning, China</p>
 <p align = "center">b.Shenyang Institute of Automation, Chinese Academy of Sciences, Shenyang, Liaoning, China</p>
